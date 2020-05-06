@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.scores {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    max-width: 250px;
+}
+
+.scoreboard h2 {
+    text-align: center;
+}
+
+.score {
+    text-align: center;
+    margin: 0 10px;
+    min-width: 90px;
+
+}
+
+.board {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.computer, .player {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 270px;
+    margin: 0 10px;
+}
+
+.computer {
+    background-color: lightgreen;
+    border: 1px solid green;
+    border-radius: 10px;
+}
+
+.player {
+    background-color: lightcoral;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+
+img {
+    width: 200px;
+}
+
+.next-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.choice {
+    height: 125px;
+    background-color:#f2f2f2;
+    margin: 2px;
+    border: 1px solid rgba(131, 131, 131, .75);
+    border-radius: 5px;
+}
+
+.choice:hover {
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.25);
+}
+
+.choice img {
+    width: 100px;
+}
+
+.choice p {
+    text-align: center;
+}
