@@ -6,6 +6,7 @@ let computerChoice=0;
 let playerChoice=1;
 let computer = document.getElementById('computer');
 let player = document.getElementById('player');
+let historyListElement = document.getElementById('history-list');
 let winner;
 
 Number.prototype.mod = function(n) {
@@ -18,21 +19,21 @@ let randomizeComputer = () => {
 
 let decideWinner = (computerChoice, playerChoice) => {
     if ((playerChoice-computerChoice).mod(3) === 2) {
-        winner = 'player';
+        winner = 'Player';
         //console.log(winner + ' wins');
         playerScore++;
         player.className = "winner";
         computer.className = "loser";
     }
     if ((playerChoice-computerChoice).mod(3) === 1) {
-        winner = 'computer';
+        winner = 'Computer';
         //console.log(winner + ' wins');
         computerScore++;
         player.className = "loser";
         computer.className = "winner";
     }
     if (playerChoice === computerChoice) {
-        winner = 'tie';
+        winner = 'Tie';
         //console.log(winner);
         player.className = 'tie';
         computer.className = 'tie';
@@ -63,8 +64,19 @@ let displayResults = () => {
     )
 }
 
-let colorWinner = () => {
-
+let addToHistory = () => {
+    historyListElement.innerHTML = (`
+    <div class="historic-entry">
+        <div class="historic ${player.className}">
+            <img src="hands/${options[playerChoice]}.bmp">
+        </div>
+        <div class="historic ${computer.className}">
+            <img src="hands/${options[computerChoice]}.bmp">
+        </div>
+        <div class="historic record">
+            ${playerScore} - ${computerScore}
+        </div>
+    </div>`) + historyListElement.innerHTML;
 }
 
 let choices = [];
@@ -79,6 +91,7 @@ let play = event => {
     decideWinner(computerChoice, playerChoice);
 
     displayResults();
+    addToHistory();
 };
 
 for (let i = 0; i < 3; i++) {
