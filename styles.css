@@ -34,27 +34,29 @@ h1 {
     width: 100%;
 }
 
-.computer, .player {
+#computer, #player {
     display: inline-flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
     height: 270px;
     margin: 0 10px;
+    border-radius: 10px;
 }
-
-.computer {
+.winner {
     background-color: lightgreen;
     border: 1px solid green;
-    border-radius: 10px;
 }
 
-.player {
+.loser {
     background-color: lightcoral;
     border: 1px solid red;
-    border-radius: 10px;
 }
 
+.tie {
+    background-color: lightskyblue;
+    border: 1px solid blue;
+}
 
 img {
     width: 200px;
@@ -72,23 +74,24 @@ img {
     cursor: pointer;
 }
 
-.choice {
-    height: 125px;
+div.paper, div.scissors, div.rock {
+    min-height: 120px;
     background-color:#f2f2f2;
     margin: 2px;
     border: 1px solid rgba(131, 131, 131, .75);
     border-radius: 5px;
 }
 
-.choice:hover {
+div.paper:hover, div.scissors:hover, div.rock:hover {
     font-weight: bold;
     background-color: rgba(0,0,0,0.25);
 }
 
-.choice img {
+img.paper, img.scissors, img.rock {
     width: 100px;
 }
 
-.choice p {
+p.paper, p.scissors, p.rock {
     text-align: center;
+    padding-bottom: 5px;
 }

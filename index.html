@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <head>
-    <script src="rps.js"></script>
+    
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <h1>Paper Scissors Rock</h1>
     <div class="board">
-        <div class="computer">
+        <div id="computer" class="winner">
             <div class="score">
-            <h3>Computer</h3>
-            <h3 id="comp-score">
-                0
-            </h3>
-        </div>
-        <img id="comp-choice" src="hands/rock.bmp">
+                <h3>Computer</h3>
+                <h3 id="comp-score">
+                    0
+                </h3>
+            </div>
+            <img id="comp-choice" src="hands/rock.bmp">
             <p>Rock!</p>
         </div>
-        <div class="player">
+        <div id="player" class="loser">
             <div class="score">
                 <h3>Player</h3>
                 <h3 id="player-score">
@@ -31,18 +31,19 @@
     <div class="next-choice">
         <h4>Choose Wisely!</h4>
         <div class="choices">
-            <div class="choice">
-                <img id="rock" src="hands/rock.bmp">
-                <p>Rock</p>
+            <div class="rock" >
+                <img class="rock" src="hands/rock.bmp">
+                <p class="rock">Rock</p>
             </div>
-            <div class="choice">
-                <img id="rock" src="hands/scissors.bmp">
-                <p>Scissors</p>
+            <div class="scissors">
+                <img class="scissors" src="hands/scissors.bmp">
+                <p class="scissors" >Scissors</p>
             </div>
-            <div class="choice">
-                <img id="rock" src="hands/paper.bmp">
-                <p>Paper</p>
+            <div class="paper">
+                <img class="paper" src="hands/paper.bmp">
+                <p class="paper">Paper</p>
             </div>
         </div>
     </div>
 </body>
+<script src="rps.js"></script>
