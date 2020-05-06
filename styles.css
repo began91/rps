@@ -3,9 +3,19 @@
     margin: 0
 }
 
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 h1 {
     font-size: 36px;
     text-align: center;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid rgba(131, 131, 131, .75);
+    padding: 5px;
 }
 
 .scores {
@@ -15,23 +25,14 @@ h1 {
     max-width: 250px;
 }
 
-.scoreboard h2 {
-    text-align: center;
-}
-
 .score {
     text-align: center;
     margin: 0 10px;
     min-width: 90px;
-
 }
 
 .board {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    margin: 20px;
 }
 
 #computer, #player {
@@ -95,4 +96,44 @@ img.paper, img.scissors, img.rock {
 p.paper, p.scissors, p.rock {
     text-align: center;
     padding-bottom: 5px;
+}
+
+.history-names {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#history h3 {
+    text-align: center;
+}
+
+#history h4 {
+    display: inline-block;
+    padding: 2px;
+    text-align: center;
+}
+
+.historic-entry {
+    text-align: center;
+}
+
+.historic {
+    display: inline-block;
+}
+
+.historic img {
+    width: 20px;
+    padding: 0 30px;
+}
+
+.win {
+    background-color: lightgreen;
+}
+
+.loss {
+    background-color: lightcoral;
+}
+
+.tie {
+    background-color: lightskyblue;
 }
