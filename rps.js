@@ -4,6 +4,8 @@ let computerScore = 0;
 let playerScore = 0;
 let computerChoice=0;
 let playerChoice=1;
+let rounds = 0;
+let history = [];
 let computer = document.getElementById('computer');
 let player = document.getElementById('player');
 let historyListElement = document.getElementById('history-list');
@@ -38,6 +40,7 @@ let decideWinner = (computerChoice, playerChoice) => {
         player.className = 'tie';
         computer.className = 'tie';
     }
+    rounds++;
 }
 
 let displayResults = () => {
@@ -65,7 +68,10 @@ let displayResults = () => {
 }
 
 let addToHistory = () => {
-    historyListElement.innerHTML = (`
+    if (rounds > 16) {
+        history.pop();
+    }
+    history.unshift(`
     <div class="historic-entry">
         <div class="historic ${player.className}">
             <img src="hands/${options[playerChoice]}.bmp">
@@ -76,7 +82,9 @@ let addToHistory = () => {
         <div class="historic record">
             ${playerScore} - ${computerScore}
         </div>
-    </div>`) + historyListElement.innerHTML;
+    </div>`);
+    historyListElement.innerHTML = '';
+    history.forEach(item => historyListElement.innerHTML +=item);
 }
 
 let choices = [];
