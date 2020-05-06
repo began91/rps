@@ -70,8 +70,8 @@ let colorWinner = () => {
 let choices = [];
 
 let play = event => {
-    console.log(event);
-    playerChoice = options.indexOf(event.originalTarget.className);
+    //console.log(event);
+    playerChoice = options.indexOf(event.target.className);
     
     computerChoice = Math.floor(Math.random()*3);
     //console.log("computer: " + computerChoice + options[computerChoice]);

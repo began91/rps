@@ -80,6 +80,7 @@ button.paper, button.scissors, button.rock {
     margin: 2px;
     border: 1px solid rgba(131, 131, 131, .75);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 button.paper:hover, button.scissors:hover, button.rock:hover {
