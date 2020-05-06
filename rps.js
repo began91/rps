@@ -83,4 +83,6 @@ let play = event => {
 
 for (let i = 0; i < 3; i++) {
     document.getElementsByClassName(options[i])[0].addEventListener('click', play);
+
+    document.getElementsByClassName(options[i])[0].addEventListener('touch', play);
 }

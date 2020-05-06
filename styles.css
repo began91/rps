@@ -74,7 +74,7 @@ img {
     cursor: pointer;
 }
 
-div.paper, div.scissors, div.rock {
+button.paper, button.scissors, button.rock {
     min-height: 120px;
     background-color:#f2f2f2;
     margin: 2px;
@@ -82,7 +82,7 @@ div.paper, div.scissors, div.rock {
     border-radius: 5px;
 }
 
-div.paper:hover, div.scissors:hover, div.rock:hover {
+button.paper:hover, button.scissors:hover, button.rock:hover {
     font-weight: bold;
     background-color: rgba(0,0,0,0.25);
 }
