@@ -151,6 +151,24 @@ p.paper, p.scissors, p.rock {
     }
 }
 
+@media screen and (max-width: 500px) {
+    button p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    button img {
+        max-width: 75%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    button {
+        max-height: 80px;
+    }
+}
+
 @media screen and (max-width:500px) {
     #computer, #player {
         flex-direction: row;
