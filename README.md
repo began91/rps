@@ -1,4 +1,4 @@
 # rps
 Rock Paper Scissors
 
-(GitHub Static Page)[began91.github.io/rps]
+<a href="began91.github.io/rps">GitHub Static Site</a>
