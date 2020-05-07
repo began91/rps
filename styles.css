@@ -75,7 +75,7 @@ img {
     cursor: pointer;
 }
 
-button.paper, button.scissors, button.rock {
+button {
     min-height: 120px;
     background-color:#f2f2f2;
     margin: 2px;
@@ -84,7 +84,7 @@ button.paper, button.scissors, button.rock {
     cursor: pointer;
 }
 
-button.paper:hover, button.scissors:hover, button.rock:hover {
+button:hover {
     font-weight: bold;
     background-color: rgba(0,0,0,0.25);
 }
@@ -143,4 +143,44 @@ p.paper, p.scissors, p.rock {
 
 .tie {
     background-color: lightskyblue;
+}
+
+@media screen and (max-width: 500px) {
+    img {
+        max-width: 23%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #computer, #player {
+        flex-direction: row;
+        justify-content: space-around;
+        height: unset;
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    #computer, #player {
+        height: unset;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    img {
+        max-width: 75px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    button p {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    button {
+        min-height: unset;
+        height: 100px;
+    }
 }

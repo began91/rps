@@ -68,7 +68,7 @@ let displayResults = () => {
 }
 
 let addToHistory = () => {
-    if (rounds > 16) {
+    if (rounds > 10) {
         history.pop();
     }
     history.unshift(`
